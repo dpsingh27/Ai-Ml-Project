@@ -1,0 +1,103 @@
+ 
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; font-family: Arial, sans-serif; }
+    body { background: #f5f7fb; display: flex; justify-content: center; align-items: center; }
+
+    .app {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      width: 100%;
+      max-width: 800px;
+      height: 100vh;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    header {
+      background: #800000;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    header img {
+      height: 50px;
+      width: 50px;
+      border-radius: 8px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    main {
+      padding: 1rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: #fafafa;
+    }
+
+    .msg {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .msg.bot .bubble {
+      background: #e6e6e6;
+      color: #000;
+    }
+
+    .msg.user {
+      flex-direction: row-reverse;
+    }
+
+    .msg.user .bubble {
+      background: #800000;
+      color: #fff;
+    }
+
+    
+
+    footer {
+      padding: 0.75rem;
+      background: #fff;
+      border-top: 1px solid #ddd;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    textarea {
+      flex: 1;
+      resize: none;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 0.5rem;
+      font-size: 1rem;
+      height: 40px;
+    }
+
+    button {
+      background: #800000;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .app { border-radius: 0; height: 100vh; }
+      header h1 { font-size: 1rem; }
+      header img { height: 40px; width: 40px; }
+    }
+  
